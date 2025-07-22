@@ -1,7 +1,32 @@
 import React from 'react'
 import './about.css'
+import { useState } from 'react'
+import { HiArrowSmLeft } from "react-icons/hi";
+import { HiArrowSmRight } from "react-icons/hi";
 
 const About = () => {
+  const img1 = "/assets/photo_1_2025-07-22_14-06-38.jpg"
+  const img2 = "/assets/photo_2_2025-07-22_14-06-38.jpg"
+  const img3 = "/assets/photo_3_2025-07-22_14-06-38.jpg"
+  const img4 = "/assets/photo_4_2025-07-22_14-06-38.jpg"
+  const img5 = "/assets/photo_5_2025-07-22_14-06-38.jpg"
+  const img6 = "/assets/photo_6_2025-07-22_14-06-38.jpg"
+  const images = [img1, img2, img3, img4, img5, img6]
+
+ const [currentIndex, setCurrentIndex] = useState(0);
+
+  const handlePrev = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? images.length - 1 : prevIndex - 1
+    );
+  };
+
+  const handleNext = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === images.length - 1 ? 0 : prevIndex + 1
+    );
+  };
+
   return (
     <div className='about'>
       <h1>About Me</h1>
@@ -23,14 +48,22 @@ const About = () => {
           that define me. I dream big and build daily. 
         </p>
       </div>
-      <section className='gallery'>
-        <div><img src="/assets/photo_1_2025-07-22_14-06-38.jpg" alt="midnight coding session at the curve africa" /></div>
-        <div><img src="/assets/photo_2_2025-07-22_14-06-38.jpg" alt="graduation group picture inside kora office" /></div>
-        <div><img src="/assets/photo_3_2025-07-22_14-06-38.jpg" alt="me being awarded my certificate as a fully-fledged frontend developer" /></div>
-        <div><img src="/assets/photo_4_2025-07-22_14-06-38.jpg" alt="me and my teammates for artisan aid and our team coordinator mr Joshua" /></div>
-        <div><img src="/assets/photo_5_2025-07-22_14-06-38.jpg" alt="Me and one of our best female product desiger/ secret full stack developer" /></div>
-        <div><img src="/assets/photo_6_2025-07-22_14-06-38.jpg" alt="Group graduation pictue in front of kora office" /></div>
-      </section>
+      <div className="carousel">
+         <img
+          src={images[currentIndex]}
+          alt={`curve-africa-${currentIndex + 1}`}
+          className="carousel-image"
+        />
+        <div className="carousel-buttons">
+          <button onClick={handlePrev}>
+            <HiArrowSmLeft />
+          </button>
+
+          <button onClick={handleNext}>
+            <HiArrowSmRight />
+          </button>
+        </div>
+      </div>
     </div>
   )
 }
