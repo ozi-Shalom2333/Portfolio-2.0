@@ -1,0 +1,133 @@
+.header{
+    min-height: 3rem;
+    width: 100%;
+    background: #161D28;
+    display: flex;
+    justify-content: space-between;
+    color: #ffff;
+    padding: 2rem 1rem;
+    border-bottom: 0.2px solid #ffffff41;
+    position: fixed;
+    z-index: 1000;
+
+}
+.header-logo{
+    height: 3rem;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    padding-inline: 4rem;
+}
+.header-logo img{
+    object-fit: contain;
+    width: 7rem;
+}
+.nav-tabs{
+    width: 50%;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: flex-end;
+    padding-inline-end: 3.5rem;
+}
+.nav-tabs span{
+  cursor: pointer;
+  font-family: "Syne", sans-serif;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+.nav-tabs span:hover{
+   background-color: #546375;
+   border-radius: 0.3rem;
+}
+.nav-tabs button {
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: #ffffff;
+  color: #161D28;
+  border-radius: 5px;
+  font-weight: bold;
+  font-family: "Syne", sans-serif;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+.nav-tabs button:hover {
+  background-color: #546375;
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding-inline-end: 2rem;
+  z-index: 100; 
+}
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+@media (max-width: 768px) {
+  .header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem;
+  }
+  .header-logo{
+    padding-inline: 1rem;
+  }
+  .hamburger {
+    display: flex;
+  }
+
+  
+  .hamburger.open .bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .hamburger.open .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.open .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+
+  .nav-tabs {
+    position: absolute;
+    top: 0rem;
+    right: 0;
+    width: 100%;
+    background-color: #161D28;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1.5rem 0;
+    transform: translateY(-200%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 99;
+    display: flex;
+  }
+
+  .nav-tabs.open {
+    transform: translateY(0);
+  }
+
+  .nav-tabs span,
+  .nav-tabs button {
+    font-size: 1.2rem;
+  }
+
+  .nav-tabs button {
+    width: 80%;
+    text-align: center;
+  }
+}
+
