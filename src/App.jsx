@@ -2,6 +2,8 @@ import React from 'react'
 import Header from './components/header/Header'
 import HeroIntro from './components/hero1/HeroIntro'
 import About from './components/about/About'
+import Skills from './components/skills/Skills'
+import Projects from './components/projects/Projects'
 
 
 const App = () => {
@@ -10,6 +12,8 @@ const App = () => {
       <Header />
       <HeroIntro/>
       <About />
+      <Skills/>
+      <Projects/>
     </div>
   )
 }
