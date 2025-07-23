@@ -1,0 +1,44 @@
+/* src/components/footer.css */
+
+.footer {
+  background-color: #0f1117;
+  color: #fff;
+  padding: 2rem;
+  text-align: center;
+  font-family: "Syne", sans-serif;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footer-logo {
+  font-family: "Sail", cursive;
+  font-size: 2rem;
+  color: #ffffff;
+}
+
+.footer-icons {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.footer-icons a {
+  color: #ffffff;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.footer-icons a:hover {
+  transform: scale(1.2);
+  color: #b0c9b9;
+}
+
+.footer-bottom {
+  font-size: 0.9rem;
+  color: #bbb;
+  margin-top: 1rem;
+}

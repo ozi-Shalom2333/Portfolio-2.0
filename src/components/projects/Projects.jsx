@@ -10,12 +10,12 @@ const projectList = [
   {
     title: 'Task Manager App',
     description: 'A task management app with drag-and-drop functionality.',
-    image: 'public/assets/draganddrop.jpg',
+    image: '/assets/draganddrop.jpg',
   },
   {
     title: 'canny.io replica',
     description: 'My attempt at replicating canny.io landing page',
-    image: 'public/assets/cannyimg.png',
+    image: '/assets/cannyimg.png',
   },
    {
     title: 'Voting App',

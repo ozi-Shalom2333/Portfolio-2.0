@@ -8,8 +8,17 @@
     padding: 2rem 1rem;
     border-bottom: 0.2px solid #ffffff41;
     position: fixed;
+    transition: top 0.4s ease-in-out;
     z-index: 1000;
 
+}
+
+.header.hide {
+  top: -100px;
+}
+
+.header.show {
+  top: 0;
 }
 .header-logo{
     height: 3rem;
@@ -30,7 +39,7 @@
     justify-content: flex-end;
     padding-inline-end: 3.5rem;
 }
-.nav-tabs span{
+/* .nav-tabs span{
   cursor: pointer;
   font-family: "Syne", sans-serif;
   transition: all 0.3s ease;
@@ -40,6 +49,7 @@
    background-color: #546375;
    border-radius: 0.3rem;
 }
+   */
 .nav-tabs button {
   padding: 0.5rem 1rem;
   border: none;
@@ -56,6 +66,35 @@
   background-color: #546375;
   color: #fff;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+} 
+.nav-tabs span {
+  position: relative;
+  font-family: "Syne", sans-serif;
+  padding: 0.2rem 0.4rem;
+  transition: color 0.3s ease;
+}
+
+.nav-tabs span::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background-color: #b0c9b9;
+  transition: width 0.3s ease;
+}
+
+.nav-tabs span:hover::after {
+  width: 100%;
+}
+.nav-tabs span:hover {
+  background-color: #546375;
+  border-radius: 0.3rem;
+}
+.nav-tabs .active-tab {
+  color: #b0c9b9;
+  font-weight: bold;
 }
 
 
