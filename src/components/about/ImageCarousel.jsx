@@ -28,7 +28,7 @@ const images = [
 ];
 
 const ImageCarousel = () => (
-  <div style={{ width: '100%', maxWidth: '700px', margin: '0 auto' }}>
+  <div data-aos="zoom-in" data-aos-delay="1000" style={{ width: '100%', maxWidth: '700px', margin: '0 auto' }}>
     <Carousel autoplay>
       {images.map((img, index) => (
         <div key={index}>

@@ -13,7 +13,7 @@ const About = () => {
           I started out building simple pages and now I'm chasing bigger dreams: becoming a full-stack developer, a product designer, and eventually a content creator who inspires others through tech. I’m currently improving my JavaScript and React skills, while also learning UI/UX design. Everything you see on this portfolio was built by me with dedication, grit, and love. Beyond code, I’m all about growth — personal, spiritual, and professional. I may come from a rough background, but I’m not letting that define me. I dream big and build daily.
         </p>
       </div>
-      <div data-aos="zoom-in" data-aos-delay="1000"><ImageCarousel/></div>
+      <ImageCarousel/>
     </div>
   )
 }
