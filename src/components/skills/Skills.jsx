@@ -1,8 +1,6 @@
 import React from 'react';
 import './skill.css';
-import {
-  FaHtml5, FaCss3Alt, FaReact, FaGithub, FaFigma
-} from 'react-icons/fa';
+import { FaHtml5, FaCss3Alt, FaReact, FaGithub, FaFigma } from 'react-icons/fa';
 import { RiJavascriptFill, RiTailwindCssFill } from 'react-icons/ri';
 
 const skills = [
@@ -17,11 +15,11 @@ const skills = [
 
 const Skills = () => {
   return (
-    <div className="skill-container">
-      <h2>Skills</h2>
+    <div className="skill-container" id="skills" data-aos="fade-up" data-aos-duration="800">
+      <h2 data-aos="fade-up" data-aos-delay="100">Skills</h2>
       <section className="skill-set">
-        {skills.map((skill) => (
-          <div className="skill-box" key={skill.name} aria-label={skill.name}>
+        {skills.map((skill, index) => (
+          <div className="skill-box" key={skill.name} aria-label={skill.name} data-aos="zoom-in" data-aos-delay={index * 100} data-aos-duration="600">
             {skill.icon}
             <p>{skill.name}</p>
           </div>
